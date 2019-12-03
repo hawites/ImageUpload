@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Image Upload</title>
+</head>
+<body>
+    
+<h2>Image Upload</h2>
+
+
+<form action="/display" method="post" enctype="multipart/form-data" >
+
+<label for="title">Description</label>
+    <input type="text" name="title"> <br>
+    <div style="margin-top: 30px;">
+    <input type="file" name="imageU">
+    <input type="submit" value="Submit">
+</div>
+</form>
+<label><%= err %> </label>
+<div style="margin-top: 50px;" <%= stat %> >
+    
+<img src = "<%= imagef %>" alt ="image" style="height: 40%; width: 30%;" /><br><br>
+<label>Description: <%= title%> </label>
+</div>
+</body>
+</html>
